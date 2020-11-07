@@ -8,23 +8,26 @@
 #include "MenuHandler.h"
 #include "Util.h"
 #include <iostream>
-#include <vector>
 #include <fstream>
 #include <iomanip>
 
 using namespace std;
 
+//Globally used varables
+char userChoice;
+
 //Main Menu
-void menuHandler::mainMenuC()
+void menuHandler::mainMenu()
 {
-	char userChoice;
 	do
 	{
 		cout << "Main Menu: " << endl;
-		cout << "1)Enter Mineral Prices" << endl;
-		cout << "2)Craft a ship" << endl;
-		cout << "3)View Mineral Prices" << endl;
-		cout << "4)Exit" << endl;
+		cout << "1)Menu Opt 1" << endl;
+		cout << "2)Menu Opt 2" << endl;
+		cout << "3)Menu Opt 3" << endl;
+		cout << "4)Menu Opt 4" << endl;
+		cout << "5)Menu Opt 5" << endl;
+		cout << "6)Exit" << endl;
 		cout << "Please enter you choice: ";
 		cin >> userChoice;
 		cin.ignore();
@@ -33,54 +36,66 @@ void menuHandler::mainMenuC()
 		{
 		case'1':
 			system("cls");
-			//mineralHandler::GetInstance()->editMinerals();
+			//code to submenu
 			break;
 		case'2':
 			system("cls");
-			//shipCraftingMenu();
+			//code to submenu
 			break;
 		case'3':
 			system("cls");
-			//mineralHandler::GetInstance()->viewMinerals();
+			//code to submenu
 			break;
 		case'4':
+			system("cls");
+			//code to submenu
+			break;
+		case'5':
+			system("cls");
+			//code to submenu
+			break;
+		case'6':
 			system("cls");
 			break;
 		default:
 			cout << "Please enter a valid choice!" << endl;
 		}
-	} while (userChoice != '4');
+	} while (userChoice != '6');
 }
 
 //Ship Crafting Options
-void menuHandler::shipCraftingMenu()
+void menuHandler::internalPartsMenu()
 {
-	char userChoice;
-	int craftingAmount;
-	cout << "What ship would you like to craft?" << endl;
-	cout << "1)Atron" << endl;
-	cout << "2)Heron" << endl;
-	cout << "3)Venture" << endl;
+	
+	cout << "Internal Parts Menu" << endl;
+	cout << "1)View GPU's" << endl;
+	cout << "2)View CPU's" << endl;
+	cout << "4)View RAM" << endl;
+	cout << "5)View MOBO's" << endl;
+	cout << "6 Back to main menu" << endl;
 	cin >> userChoice;
 	cin.ignore();
-	craftingAmount = Util::CheckValidValue<int>("How many would you like to make? ", 1);
 	userChoice = toupper(userChoice);
 
-	long double totalCost = 0;
-	cout << "Cost to craft is: " << endl;
 	switch (userChoice)
 	{
 	case '1':
-		//totalCost = craftingAmount * crafting::atronCost();
-		//cout << fixed << setprecision(2) << totalCost << " isk" << endl;
+		//code to submenu
 		break;
 	case '2':
-		//totalCost = craftingAmount * crafting::heronCost();
-		//cout << fixed << setprecision(2) << totalCost << " isk" << endl;
+		//code to submenu
 		break;
 	case '3':
-		//totalCost = craftingAmount * crafting::ventureCost();
-		//cout << fixed << setprecision(2) << totalCost << " isk" << endl;
+		//code to submenu
+		break;
+	case '4':
+		//code to submenu
+		break;
+	case '5':
+		//code to submenu
+		break;
+	case '6':
+		system("cls");
 		break;
 	default:
 		cout << "Please enter a valid choice!" << endl;

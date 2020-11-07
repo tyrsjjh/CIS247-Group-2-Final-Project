@@ -14,8 +14,8 @@ class menuHandler
 private:
 
 public:
-	static void mainMenuC();
-	static void shipCraftingMenu();
+	static void mainMenu();
+	static void internalPartsMenu();
 };
 
 
