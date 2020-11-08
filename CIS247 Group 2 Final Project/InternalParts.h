@@ -5,42 +5,86 @@
 //------------------------------------------------------
 
 #pragma once
+
 #include <iostream>
+#include <vector>
 using namespace std;
-class InternalParts
+
+//Settup files for storage
+const string GPU_file = "GPU's.vsv";
+const string CPU_file = "CPU's.vsv";
+const string RAM_file = "RAM.vsv";
+const string MOBO_file = "MOBOs.vsv";
+
+class GPU
 {
-private:					
-	//Attribute Variables
-	string manufacture; 
-	string model;
-	string chipSet;
-	double clockSpeed;	
-	int memory;			
-	double price;		
+private:
+	string manufacture, model;
+	int memory;
+	double price;
+	
 
 public:
-	//Constructors
-	//Argument acceptance 
-	void GPU(string man, string mod, int mem, double price);
-	void CPU(string man, string mod, string chip, double clock, double price);
-	void RAM(string man, string mod, double clock, int mem, double price);
-	void MOBO(string man, string mod, string chip, double price);
+	//Constructor
+	GPU(string, string, int, double);
 	
-	//Setters
-	void setManufacture(string man);
-	void setModel(string mod);
-	void setChipSet(string chip);
-	void setclockSpeed(double clock);
-	void setMemory(int mem);
-	void setPrice(double price);
-
-	//Getters
+	//Accessors
 	string getManufacture();
 	string getModel();
-	string getChipSet();
+	int getMemory();
+	double getPrice();
+};
+class CPU
+{
+private:
+	string manufacture, model;
+	double clockSpeed, price;
+public:
+	CPU(string, string , string , double , double);
+
+	//Accessors
+	string getManufacture();
+	string getModel();
+	double getClockSpeed();
+	double getPrice();
+};
+class RAM
+{
+private:
+	string manufacture, model;
+	int memory;
+	double clockSpeed, price;
+public:
+	RAM(string, string, double , int, double);
+
+	//Accessors
+	string getManufacture();
+	string getModel();
 	double getClockSpeed();
 	int getMemory();
 	double getPrice();
-
-
 };
+class MOBO
+{
+private:
+	string manufacture, model,chipSet;
+	double price;
+public:
+	MOBO(string man, string mod, string chip, double price);
+
+	//Accessors
+	string getManufacture();
+	string getModel();
+	string getChipSet();
+	double getPrice();
+};
+
+
+
+//Setters
+//	void setManufacture(string man);
+//	void setModel(string mod);
+//	void setChipSet(string chip);
+//	void setclockSpeed(double clock);
+//	void setMemory(int mem);
+//	void setPrice(double price);

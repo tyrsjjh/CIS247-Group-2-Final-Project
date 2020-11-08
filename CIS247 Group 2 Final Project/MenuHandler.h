@@ -14,8 +14,13 @@ class menuHandler
 private:
 
 public:
-	static void mainMenu();
-	static void internalPartsMenu();
+	//static void mainMenu();
+	//static void internalPartsMenu();
 };
 
-
+void mainMenu();
+void internalPartsMenu();
+void externalPartsMenu();
+void viewItemsMenu();
+void addRemoveItemMenu();
+ 

@@ -17,21 +17,25 @@ using namespace std;
 char userChoice;
 
 //Main Menu
-void menuHandler::mainMenu()
+void mainMenu()
 {
 	do
 	{
-		cout << "Main Menu: " << endl;
-		cout << "1)Menu Opt 1" << endl;
-		cout << "2)Menu Opt 2" << endl;
-		cout << "3)Menu Opt 3" << endl;
-		cout << "4)Menu Opt 4" << endl;
-		cout << "5)Menu Opt 5" << endl;
-		cout << "6)Exit" << endl;
-		cout << "Please enter you choice: ";
-		cin >> userChoice;
-		cin.ignore();
-		userChoice = toupper(userChoice);
+		do
+		{
+			cout << "Main Menu: " << endl;
+			cout << "1)Menu Opt 1" << endl;
+			cout << "2)Menu Opt 2" << endl;
+			cout << "3)Menu Opt 3" << endl;
+			cout << "4)Menu Opt 4" << endl;
+			cout << "5)Inv Management" << endl;
+			cout << "6)Exit" << endl;
+			cout << "Please enter you choice: ";
+			cin >> userChoice;
+			cin.ignore();
+			userChoice = toupper(userChoice);
+		} while (!checkValidInput(1, 6, userChoice));
+	
 		switch (userChoice)
 		{
 		case'1':
@@ -63,8 +67,11 @@ void menuHandler::mainMenu()
 	} while (userChoice != '6');
 }
 
-//Ship Crafting Options
-void menuHandler::internalPartsMenu()
+
+
+
+//Internal Parts Menu
+void internalPartsMenu()
 {
 	
 	cout << "Internal Parts Menu" << endl;

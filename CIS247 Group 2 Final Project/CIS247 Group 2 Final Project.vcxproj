@@ -143,6 +143,7 @@
     <ClCompile Include="ExternalParts.cpp" />
     <ClCompile Include="ExtraParts.cpp" />
     <ClCompile Include="InternalParts.cpp" />
+    <ClCompile Include="InventoryMang.cpp" />
     <ClCompile Include="MenuHandler.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="ExternalParts.h" />
     <ClInclude Include="ExtraParts.h" />
     <ClInclude Include="InternalParts.h" />
+    <ClInclude Include="InventoryMang.h" />
     <ClInclude Include="MenuHandler.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
