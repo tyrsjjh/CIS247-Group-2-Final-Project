@@ -1,8 +1,9 @@
-//------------------------------------------------------
-//Purpose:  This class will hold Internal part methods
-//			for things such as CPU, GPU, RAM, Motherboards
-//
-//------------------------------------------------------
+/*------------------------------------------------------
+Purpose:  This class will hold Parts 
+			for things such as CPU, GPU, RAM, Motherboards
+
+			Done
+*/
 
 #pragma once
 
@@ -11,11 +12,13 @@
 using namespace std;
 
 //Settup files for storage
-const string GPU_file = "GPU's.vsv";
-const string CPU_file = "CPU's.vsv";
-const string RAM_file = "RAM.vsv";
-const string MOBO_file = "MOBOs.vsv";
 
+//Internal Parts
+const string GPU_file = "GPU's.csv";
+const string CPU_file = "CPU's.csv";
+const string RAM_file = "RAM.csv";
+
+//Classes for Internal Parts
 class GPU
 {
 private:
@@ -81,10 +84,4 @@ public:
 
 
 
-//Setters
-//	void setManufacture(string man);
-//	void setModel(string mod);
-//	void setChipSet(string chip);
-//	void setclockSpeed(double clock);
-//	void setMemory(int mem);
-//	void setPrice(double price);
+

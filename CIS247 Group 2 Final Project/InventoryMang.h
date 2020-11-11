@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include "InternalParts.h"
+#include "Parts.h"
 
 using namespace std;
 class Inventory

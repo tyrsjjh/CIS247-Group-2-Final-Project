@@ -1,5 +1,5 @@
 #include "InventoryMang.h"
-#include "InternalParts.h"
+#include "Parts.h"
 
 using namespace std;
 

@@ -1,12 +1,17 @@
 #include "Util.h"
 
 
-bool checkValidValue(int min, int max, int userChoice) {
-	if ((userChoice > max) || (userChoice < min))
+bool checkValidInput(int min, int max, int choice)
+{
+	if ((choice > max) || (choice < min))
 	{
-		cout << "Please Enter a valid Option \n";
-		system("Pause");
+		cout << "Invalid choice\n";
+		system("PAUSE");
 		return false;
 	}
-	return true;
+	else
+	{
+		return true;
+	}
+	
 }
