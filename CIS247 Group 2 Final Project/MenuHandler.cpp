@@ -5,21 +5,24 @@
 			 
 */
 
-#include "MenuHandler.h"
+
 #include "Util.h"
-#include "InventoryMang.h"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include "MenuHandler.h"
+#include "Parts.h"
+#include <vector>
 
 using namespace std;
 
-//Globally used varables
-string addRemovePath; //add or remove option used in multiple functions
+
+
 
 
 //Main Menu -testing(partial)
-void menuHandler::mainMenu()
+
+void mainMenu(Inventory& inv)
 {
 	bool exit = false;
 	string input;
@@ -60,7 +63,7 @@ void menuHandler::mainMenu()
 			break;
 		case 5:
 			system("cls");
-			inventoryMangMenu();
+			inventoryMangMenu(inv);
 			break;
 		case 6:
 			system("cls");
@@ -71,7 +74,7 @@ void menuHandler::mainMenu()
 }
 
 //Inventory Management Menu -testing(partial)
-void inventoryMangMenu() 
+void inventoryMangMenu(Inventory& inv)
 {
 	int userChoice;
 	bool exit = false;
@@ -93,19 +96,19 @@ void inventoryMangMenu()
 		{
 		case 1:
 			system("cls");
-			addRemoveItemMenu(ADD);
+			addRemoveItemMenu(inv,ADD);
 			break;
 		case 2:
 			system("cls");
-			addRemoveItemMenu(REMOVE);
+			addRemoveItemMenu(inv,REMOVE);
 			break;
 		case 3:
 			system("cls");
-			viewItemsMenu();
+			inv.printGPU();
 			break;
 		case 4:
 			system("cls");
-			menuHandler::mainMenu();
+			mainMenu(inv);
 			break;
 		}
 	} while (!exit);
@@ -114,11 +117,11 @@ void inventoryMangMenu()
 
 
 //Adding and Removing Items Menu -testing(partial)
-void addRemoveItemMenu(addRemoveOpt addRemoveOptInput) 
+void addRemoveItemMenu(Inventory& inv,addRemoveOpt addRemoveOptInput)
 {
 	bool exit = false;
 	int userChoice;
-	
+	string addRemovePath;
 	if (addRemoveOptInput == ADD)
 		addRemovePath = "ADD";
 	else if (addRemoveOptInput == REMOVE)
@@ -138,7 +141,7 @@ void addRemoveItemMenu(addRemoveOpt addRemoveOptInput)
 	{
 	case 1:
 		system("cls");
-		addMangSubMenu();
+		addMangSubMenu(inv);
 		break;
 	case 2:
 		system("cls");
@@ -150,13 +153,13 @@ void addRemoveItemMenu(addRemoveOpt addRemoveOptInput)
 		break;
 	case 4:
 		system("cls");
-		inventoryMangMenu();
+		inventoryMangMenu(inv);
 		break;
 	}
 } 
 
 //Adding Items (Managment) submenu(testing)
-void addMangSubMenu() 
+void addMangSubMenu(Inventory& inv) 
 {
 	int userChoice;
 	do
@@ -172,7 +175,7 @@ void addMangSubMenu()
 	{
 	case 1:
 		system("cls");
-		addGPUMenu();
+		addGPUMenu(inv);
 		break;
 	case 2:
 		system("cls");
@@ -184,13 +187,13 @@ void addMangSubMenu()
 		break;
 	case 4:
 		system("cls");
-		inventoryMangMenu();
+		inventoryMangMenu(inv);
 		break;
 	}
 
 }
 
-void addGPUMenu() 
+void addGPUMenu(Inventory& inv) 
 {
 	string man, mod;
 	int mem;
@@ -205,69 +208,9 @@ void addGPUMenu()
 	cin >> mem;
 	cout << "Enter the Price: " << endl;
 	cin >> price;
-	Inventory::addGPU(man,mod,mem,price);
+	inv.addGPU(man,mod,mem,price);
 
 }
-//GPU::GPU(string man, string mod, int mem, double price) {
-//	manufacture = man;
-//	model = mod;
-//	memory = mem;
-//	price = price;
-//}
 
 
-//Menus for later use?
 
-//Viewing Items Menu -testing
-void viewItemsMenu() {
-
-}
-//Internal Parts Menu -testing
-void internalPartsMenu()
-{
-	char userChoice;
-	
-	cout << "Internal Parts Menu" << endl;
-	cout << "1)View GPU's" << endl;
-	cout << "2)View CPU's" << endl;
-	cout << "4)View RAM" << endl;
-	cout << "5)View MOBO's" << endl;
-	cout << "6 Back to main menu" << endl;
-	cin >> userChoice;
-	cin.ignore();
-	userChoice = toupper(userChoice);
-
-	switch (userChoice)
-	{
-	case '1':
-		//code to submenu
-		break;
-	case '2':
-		//code to submenu
-		break;
-	case '3':
-		//code to submenu
-		break;
-	case '4':
-		//code to submenu
-		break;
-	case '5':
-		//code to submenu
-		break;
-	case '6':
-		system("cls");
-		break;
-	default:
-		cout << "Please enter a valid choice!" << endl;
-		break;
-	}
-	cout << endl;
-}
-//External Parts Menu -testing
-void externalPartsMenu() {
-
-}
-//Extra Parts Menu -testing
-void extraPartsMenu() {
-
-}

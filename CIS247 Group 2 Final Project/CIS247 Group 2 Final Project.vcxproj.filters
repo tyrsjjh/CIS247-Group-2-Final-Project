@@ -38,9 +38,6 @@
     <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InventoryMang.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Parts.h">
       <Filter>Header Files</Filter>
     </ClInclude>

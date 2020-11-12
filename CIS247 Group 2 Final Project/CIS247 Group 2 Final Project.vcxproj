@@ -147,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parts.h" />
-    <ClInclude Include="InventoryMang.h" />
     <ClInclude Include="MenuHandler.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
