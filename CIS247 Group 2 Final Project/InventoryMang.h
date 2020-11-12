@@ -9,7 +9,7 @@ class Inventory
 public:
 	Inventory(); //default
 	//Internal Parts
-	void addGPU(string, string, int, double);
+	static void addGPU(string, string, int, double);
 	void addCPU(string, string, string, double, double);
 	void addRAM(string, string, double, int, double);
 	void addMOBO(string, string, string, double);
