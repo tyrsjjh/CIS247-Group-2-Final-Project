@@ -97,6 +97,36 @@ double MOBO::getPrice() {
 	return price;
 }
 
+void GPU::printInfo() {
+	cout << "- GPU -" << endl;
+	cout << "Manufacture: " << manufacture << endl;
+	cout << "Model: " << model << endl;
+	cout << "Memory: " << memory << endl;
+	cout << "Price: " << price << endl;
+}
 
+void CPU::printInfo() {
+	cout << "- CPU -" << endl;
+	cout << "Manufacture: " << manufacture << endl;
+	cout << "Model: " << model << endl;
+	cout << "Clock Speed: " << clockSpeed << endl;
+	cout << "Price: " << price << endl;
+}
 
+void RAM::printInfo() {
+	cout << "- RAM -" << endl;
+	cout << "Manufacture: " << manufacture << endl;
+	cout << "Model: " << model << endl;
+	cout << "Clock Speed: " << clockSpeed << endl;
+	cout << "Memory: " << memory << endl;
+	cout << "Price: " << price << endl;
+}
+
+void MOBO::printInfo() {
+	cout << "- MOBO -" << endl;
+	cout << "Manufacture: " << manufacture << endl;
+	cout << "Model: " << model << endl;
+	cout << "Chipset: " << chipSet << endl;
+	cout << "Price: " << price << endl;
+}
 
