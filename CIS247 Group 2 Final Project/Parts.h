@@ -36,6 +36,7 @@ public:
 	string getModel();
 	int getMemory();
 	double getPrice();
+	void printInfo();
 };
 class CPU
 {
@@ -50,6 +51,7 @@ public:
 	string getModel();
 	double getClockSpeed();
 	double getPrice();
+	void printInfo();
 };
 class RAM
 {
@@ -66,6 +68,7 @@ public:
 	double getClockSpeed();
 	int getMemory();
 	double getPrice();
+	void printInfo();
 };
 class MOBO
 {
@@ -80,6 +83,7 @@ public:
 	string getModel();
 	string getChipSet();
 	double getPrice();
+	void printInfo();
 };
 
 
